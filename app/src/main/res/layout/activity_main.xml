@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_download_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downloading: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_download_progress_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="downloading progress"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_download_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_download_progress">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_unzip_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unzip file: "
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_download_progress"
+        app:layout_constraintTop_toBottomOf="@+id/tv_download_progress">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_unzip_progress_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unzip progress"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_unzip_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_unzip_progress">
+
+    </TextView>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/btn_open_file"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </WebView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_open_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open File"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_download_file"
+        app:layout_constraintEnd_toEndOf="@+id/btn_download_file"
+        app:layout_constraintStart_toStartOf="@+id/btn_download_file">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_download_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Download File"
+        app:layout_constraintBottom_toTopOf="@+id/btn_qrcode_scanner"
+        app:layout_constraintEnd_toEndOf="@+id/btn_qrcode_scanner"
+        app:layout_constraintStart_toStartOf="@+id/btn_qrcode_scanner">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_qrcode_scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QRCode Scanner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.appcompat.widget.AppCompatButton>
+</androidx.constraintlayout.widget.ConstraintLayout>
